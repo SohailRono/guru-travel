@@ -7,6 +7,28 @@
   pointer-events: none;
 }
 
+nav img{
+  width: 60px;
+}
+
+nav li{
+  margin-right: 20px;
+}
+
+main{
+  background-image: url('./images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: bottom;
+}
+
+.bookingForm input{
+  font-weight: bold;
+  color: #282c34;
+
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

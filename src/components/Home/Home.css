@@ -1,0 +1,14 @@
+.places:hover{
+    width: 100%;
+    border: 2px solid yellow;
+    border-radius: 20px;
+}
+
+.places h5{
+   
+    color: white;
+}
+
+.small{
+    transform: scale(0.98);
+}
