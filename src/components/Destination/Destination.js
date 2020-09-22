@@ -8,18 +8,31 @@ const Destination = (props) => {
     const { name, desc } = destinationPlace;
     console.log('destinationPlace', destinationPlace)
 
-    const [date, setDate] = useState({from:0,to:0});
+    const [date, setDate] = useState({ from: 0, to: 0 });
 
     const handleSubmit = () => {
-        
+
     }
 
     const handleDate = (e) => {
-        const fromDate = {...date};
-        fromDate.from = e.target.value;
-        setDate(fromDate);
-        console.log(fromDate)
+        const fromToDate = { ...date };
+        if (e.target.name === 'from') {
+            fromToDate.from = new Date(e.target.value);
+        }
+        if (e.target.name === 'to') {
+            fromToDate.to = new Date(e.target.value);
+        }
+        // console.log('from ',fromToDate.from, 'to ',fromToDate.to)
+
+        // setDate(fromToDate);
+        const di = getDifferenceInDays(fromToDate.from,fromToDate.to)
+        console.log('date',di)
     }
+
+    function getDifferenceInDays(date1, date2) {
+        const diffInMs = Math.abs(date2 - date1);
+        return diffInMs / (1000 * 60 * 60 * 24);
+      }
 
     return (
         <div className="section">
@@ -42,12 +55,12 @@ const Destination = (props) => {
                             <div className="form-row">
                                 <div className="form-group col-md-6 font-weight-bold">
                                     <label htmlFor="from">From</label>
-                                    <input type="date" onChange={handleDate}  className="datepicker form-control input-date" id="from" name="from" />
-                                   
+                                    <input type="date" onChange={handleDate} className="datepicker form-control input-date" id="from" name="from" />
+
                                 </div>
                                 <div className="form-group col-md-6 font-weight-bold">
                                     <label htmlFor="to">To</label>
-                                    <input type="date" onChange={handleDate}  className="form-control input-date" id="to" name="to" />
+                                    <input type="date" onChange={handleDate} className="form-control input-date" id="to" name="to" />
                                 </div>
                             </div>
                             <div className="form-group font-weight-bold">
@@ -57,7 +70,7 @@ const Destination = (props) => {
 
                         </form>
 
-                       
+
 
                     </div>
                 </div>
