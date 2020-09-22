@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import fakeData from '../../FakeData/fakeData';
 
 const Destination = (props) => {
@@ -9,24 +9,27 @@ const Destination = (props) => {
     console.log('destinationPlace', destinationPlace)
 
     const [date, setDate] = useState({ from: 0, to: 0 });
+    const fromDate = new Date(date.from);
+    const toDate = new Date(date.to);
+    const diffrence = (toDate - fromDate);
+    const totalDays = (((diffrence / 1000) / 3600) / 24);
+    const disabled = totalDays < 1;
+    console.log(disabled, 'tot',totalDays)
 
     const handleSubmit = () => {
 
     }
 
     const handleDate = (e) => {
-        const fromToDate = { ...date };
+        const fromDate = { ...date };
         if (e.target.name === 'from') {
-            fromToDate.from = new Date(e.target.value);
+            fromDate.from = e.target.value;
         }
         if (e.target.name === 'to') {
-            fromToDate.to = new Date(e.target.value);
+            fromDate.to = e.target.value;
         }
-        // console.log('from ',fromToDate.from, 'to ',fromToDate.to)
 
-        // setDate(fromToDate);
-        const di = getDifferenceInDays(fromToDate.from,fromToDate.to)
-        console.log('date',di)
+        setDate(fromDate);
     }
 
     function getDifferenceInDays(date1, date2) {
@@ -65,7 +68,10 @@ const Destination = (props) => {
                             </div>
                             <div className="form-group font-weight-bold">
                                 <label htmlFor="origin">Destination</label>
-                                <input type="submit" className="btn btn-warning btn-block" id="origin" value="Start Booking" />
+                                
+                               <Link to={`/booking/${placeName}`} >
+                               <input disabled={disabled} type="submit" className="btn btn-warning btn-block" id="origin" value="Start Booking" />
+                               </Link>
                             </div>
 
                         </form>

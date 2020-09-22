@@ -7,26 +7,49 @@
   pointer-events: none;
 }
 
-nav img{
-  width: 60px;
+#nav {
+  background-color: rgba(0, 0, 0, .51);
+  color: #fff;
 }
 
-nav li{
+#nav img {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+#booking img {
+  width: 100%;
+}
+
+#booking .icon-img {
+  width: 10px;
+}
+
+nav li {
   margin-right: 20px;
 }
 
-main{
-  background-image: url('./images/bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+main {
+  background-image: url(./images/bg.png);
   min-height: 100vh;
+  background-size: cover;
   background-position: bottom;
+  padding-top: 130px;
 }
 
-.bookingForm input{
+.bookingForm input {
   font-weight: bold;
   color: #282c34;
+}
 
+.login-box {
+  width: 360px;
+}
+
+.register-box {
+  width: 360px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

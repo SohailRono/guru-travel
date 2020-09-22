@@ -8,21 +8,36 @@ const fakeData = [
         hotels: [
             {
                 name: 'HOTEL PARAMOUNT',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2027.png',
+                photo: require('../images/Rectangle26.png'),
                 perNight: 30,
-                rating: '5.0' 
+                rating: '5.0',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL MONKEY',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2026.png',
+                photo: require('../images/Rectangle27.png'),
                 perNight: 26,
-                rating: '4.6' 
+                rating: '4.6',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL VIESTA',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2028.png',
+                photo: require('../images/Rectangle28.png'),
                 perNight: 48,
-                rating: '4.9' 
+                rating: '4.9',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             }
         ]
     },
@@ -35,21 +50,36 @@ const fakeData = [
         hotels: [
             {
                 name: 'HOTEL TEECUP',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2026.png',
+                photo: require('../images/Rectangle26.png'),
                 perNight: 27,
-                rating: '3.8' 
+                rating: '3.8',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL ROOFTOP',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2028.png',
+                photo: require('../images/Rectangle27.png'),
                 perNight: 12,
-                rating: '4.8' 
+                rating: '4.8',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL CLOUDFLARE',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2027.png',
+                photo: require('../images/Rectangle28.png'),
                 perNight: 20,
-                rating: '4.4' 
+                rating: '4.4',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             }
         ]
     },
@@ -63,21 +93,36 @@ const fakeData = [
             
             {
                 name: 'HOTEL ROAR',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2026.png',
+                photo: require('../images/Rectangle26.png'),
                 perNight: 48,
-                rating: '4.5' 
+                rating: '4.5',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL QUADRINO',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2027.png',
+                photo: require('../images/Rectangle27.png'),
                 perNight: 40,
-                rating: '4.3' 
+                rating: '4.3',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             },
             {
                 name: 'HOTEL MOSQUITO',
-                photo: 'https://raw.githubusercontent.com/ProgrammingHero1/travel-guru/master/Image/Rectangle%2028.png',
+                photo: require('../images/Rectangle28.png'),
                 perNight: 29,
-                rating: '4.9' 
+                rating: '4.9',
+                guests:2,
+                bedrooms:2,
+                beds:2,
+                baths:1,
+                others:'wify Air condition kitchen'
             }
         ]
     }
