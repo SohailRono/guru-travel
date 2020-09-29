@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import fakeData from '../../FakeData/fakeData';
 import star from '../../images/Icon/star_1_.png';
@@ -39,7 +39,7 @@ const Booking = () => {
                         }
                     </div>
                     <div className="col-md-6 col-sm-12 p-5">
-                        <iframe title={placeName} src={map} frameborder="3" width="100%" height="100%"></iframe>
+                        <iframe title={placeName} src={map} frameBorder="3" width="100%" height="100%"></iframe>
                     </div>
                 </div>
             </div>
